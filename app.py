@@ -9,9 +9,14 @@ from langchain.embeddings import OpenAIEmbeddings
 from langchain.indexes import VectorstoreIndexCreator
 from langchain.indexes.vectorstore import VectorStoreIndexWrapper
 from langchain.llms import OpenAI
+
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 from langchain.vectorstores import Chroma
 
-os.environ["OPENAI_API_KEY"] = OPENAPIKEY
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAPIKEY")
 
 # Enable to save to disk & reuse the model (for repeated queries on the same data)
 PERSIST = False
@@ -25,7 +30,7 @@ if PERSIST and os.path.exists("persist"):
   vectorstore = Chroma(persist_directory="persist", embedding_function=OpenAIEmbeddings())
   index = VectorStoreIndexWrapper(vectorstore=vectorstore)
 else:
-  loader = TextLoader("input/data.txt") # Use this line if you only need data.txt
+  loader = TextLoader("input/input_data.txt") # Use this line if you only need data.txt
   # loader = DirectoryLoader("data/")
   if PERSIST:
     index = VectorstoreIndexCreator(vectorstore_kwargs={"persist_directory":"persist"}).from_loaders([loader])
