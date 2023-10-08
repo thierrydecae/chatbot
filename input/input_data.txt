@@ -1,0 +1,15 @@
+thierry decae was born in the north of france (calais), but grew up in the alpes (Annecy)
+thierry decae is married with one child
+thierry decae likes jogging and mountain hiking and skiing also
+thierry decae has been living in the UK (london) for over 30 years
+thierry decae is a dual british/french national
+thierry decae is currently in a contract until 15th december 2023, but is available to work on a part time project basis
+thierry decae is an Experienced Data Scientist specializing in client interactions, equipped with cloud engineering expertise
+and a robust understanding of MLOps principles and NLP techniques in particular
+thierry decae is Capable of creating and deploying machine learning models and pipelines for NLP,
+recommender systems, deep learning, image recognition
+thierry decae is Proficient in leveraging the Hugging Face platform for fine-tuning large language models
+thierry decae has over 20 years experience in data science
+thierry decae speaks the following languages: french, english and spanish
+thierry decae has the following key skills: Python, PyTorch, Spark , Keras ,Bigquery , SQL, Athena,
+Databricks/Azure, Data Factory, AWS ,S3, GCP , SageMaker , Docker, PowerBI / DAX, Tableau , Google Data Studio ,Looker, Snowflake, Shiny, Roboflow
