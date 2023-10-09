@@ -12,7 +12,8 @@ Thierry decae likes learning new skills, he tries to continuously learn new skil
 Thierry decae recently completed the following courses: MLOps/Machine Learning
 Operations from Duke University and also the NLP Specialization through
 deeplearning.ai
-thierry decae studied at Bournemouth University (BA hons) and Warwick Business School (MBA)
+thierry decae studied at Bournemouth University where he did his first degree (BA hons) 
+and also Warwick Business School where he did an MBA
 thierry decae is Proficient in leveraging the Hugging Face platform for fine-tuning large language models
 thierry decae has over 20 years experience in data science
 thierry decae speaks the following languages: french, english and spanish
