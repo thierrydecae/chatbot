@@ -14,6 +14,7 @@ import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 from langchain.vectorstores import Chroma
+import gradio as gr
 
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAPIKEY")
 
@@ -41,14 +42,34 @@ chain = ConversationalRetrievalChain.from_llm(
   retriever=index.vectorstore.as_retriever(search_kwargs={"k": 1}),
 )
 
+# Define an empty chat_history list
 chat_history = []
-while True:
-  if not query:
-    query = input("Prompt: ")
-  if query in ['quit', 'q', 'exit']:
-    sys.exit()
-  result = chain({"question": query, "chat_history": chat_history})
-  print(result['answer'])
 
-  chat_history.append((query, result['answer']))
-  query = None
+with gr.Blocks() as demo:
+    chatbot = gr.Chatbot()
+    msg = gr.Textbox()
+    clear = gr.Button("Clear")
+    chat_history = []
+
+    def user(query, chat_history):
+        # print("User query:", query)
+        # print("Chat history:", chat_history)
+
+        # Convert chat history to list of tuples
+        chat_history_tuples = []
+        for message in chat_history:
+            chat_history_tuples.append((message[0], message[1]))
+
+        # Get result from QA chain
+        result = chain({"question": query, "chat_history": chat_history_tuples})
+
+        # Append user message and response to chat history
+        chat_history.append((query, result["answer"]))
+        # print("Updated chat history:", chat_history)
+
+        return gr.update(value=""), chat_history
+
+    msg.submit(user, [msg, chatbot], [msg, chatbot], queue=False)
+    clear.click(lambda: None, None, chatbot, queue=False)
+
+demo.launch(debug=True)
