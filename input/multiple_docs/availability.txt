@@ -1,0 +1,5 @@
+availability:
+-currently in a work contract until 10th november 2023, but is available to work on a part time project basis.
+-is not interested in working on a permanent basis.
+-prefer to work remotely or hybrid if needed.
+-favours working within agile methodologies, using git, jira etc
