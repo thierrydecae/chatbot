@@ -8,3 +8,5 @@ recommender systems, deep learning, im tries to continuously learn new skills.
 -has over 20 years experience in data science.
 -speaks the following languages: french, english and spanish.
 -has the following technical skills: Python, PyTorch, Spark , Keras ,Bigquery , SQL, Athena, Databricks/Azure, Data Factory, AWS ,S3, GCP , SageMaker , Docker, PowerBI / DAX, Tableau , Google Data Studio ,Looker, Snowflake, Shiny, Roboflow.
+-able to use large language models to create NLP tasks and chatbots such as this one.
+-you can find more information about my experience in my github page (https://github.com/thierrydecae)

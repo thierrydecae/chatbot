@@ -52,7 +52,7 @@ chain = ConversationalRetrievalChain.from_llm(
 chat_history = []
 
 with gr.Blocks() as demo:
-    chatbot = gr.Chatbot()
+    chatbot = gr.Chatbot(avatar_images=["./input/avatar/Guest.jpg","./input/avatar/Thierry Picture.jpg"])
     msg = gr.Textbox()
     clear = gr.Button("Clear")
     chat_history = []
