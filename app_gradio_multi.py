@@ -52,7 +52,7 @@ chain = ConversationalRetrievalChain.from_llm(
 chat_history = []
 
 with gr.Blocks() as demo:
-    chatbot = gr.Chatbot(avatar_images=["./input/avatar/Guest.jpg","./input/avatar/Thierry Picture.jpg"])
+    chatbot = gr.Chatbot([("", "Hello, I'm Thierry Decae's chatbot, you can ask me any recruitment relaged questions such as my previous experience, where i'm eligible to work, when I can start work, my most recent experience, what NLP skills I have, and much more!")],avatar_images=["./input/avatar/Guest.jpg","./input/avatar/Thierry Picture.jpg"])
     msg = gr.Textbox()
     clear = gr.Button("Clear")
     chat_history = []
