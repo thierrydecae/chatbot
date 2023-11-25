@@ -1,5 +1,6 @@
 import os
 import sys
+from dotenv import load_dotenv
 import openai
 from langchain.chains import ConversationalRetrievalChain, RetrievalQA
 from langchain.chat_models import ChatOpenAI
@@ -17,6 +18,7 @@ sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from langchain.vectorstores import Chroma
 import gradio as gr
 
+load_dotenv()
 os.environ["OPENAI_API_KEY"] = os.getenv("OPENAPIKEY")
 
 docs = []
@@ -52,7 +54,7 @@ chain = ConversationalRetrievalChain.from_llm(
 chat_history = []
 
 with gr.Blocks() as demo:
-    chatbot = gr.Chatbot([("", "Hello, I'm Thierry Decae's chatbot, you can ask me any recruitment relaged questions such as my previous experience, where i'm eligible to work, when I can start work, my most recent experience, what NLP skills I have, and much more!")],avatar_images=["./input/avatar/Guest.jpg","./input/avatar/Thierry Picture.jpg"])
+    chatbot = gr.Chatbot([("", "Hello, I'm Ben's chatbot, what can I tell you about Ben's CV?")],avatar_images=["./input/avatar/Guest.jpg","./input/avatar/Thierry Picture.jpg"])
     msg = gr.Textbox()
     clear = gr.Button("Clear")
     chat_history = []

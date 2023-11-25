@@ -1,6 +1,0 @@
-availability:
--currently in a work contract until 10th november 2023, so is available straight after that date.
--is not interested in working on a permanent basis.
--prefer to work remotely or hybrid if needed.
--favours working within agile methodologies, using git, jira etc
--elible to work in the UK and the European Union given I am a dual passport holder (French/British)
